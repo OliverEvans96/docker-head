@@ -1,1 +1,3 @@
 Create a docker container that you can ssh into over port 10385 that can control the host docker daemon.
+
+I'm going to use this to control ResinOS via SSH on a Raspberry Pi
