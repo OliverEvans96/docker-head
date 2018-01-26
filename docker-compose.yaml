@@ -1,10 +1,9 @@
 version: '2.3'
 services:
-    docker-sshd:
+    docker-head:
         build:
             context: .
             dockerfile: Dockerfile
-            #image: jupyter:latest
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock
         ports:
