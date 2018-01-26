@@ -1,0 +1,1 @@
+Create a docker container that you can ssh into over port 10385 that can control the host docker daemon.

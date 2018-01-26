@@ -1,0 +1,11 @@
+version: '2.3'
+services:
+    docker-sshd:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            #image: jupyter:latest
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+        ports:
+            - "10385:22"
