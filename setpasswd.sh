@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # From https://unix.stackexchange.com/a/232083
 # Read password from stdin securely
 
