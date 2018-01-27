@@ -40,6 +40,16 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 EXPOSE 22
 
+# Forward X11 over SSH
+# sed can't easily replace mutli-line strings, whereas perl can
+RUN perl \
+    -0 -i -pe \
+    's/X11Forwarding no/X11Forwarding yes/; \
+    s/X11Forwarding yes/X11Forwarding yes\nX11UseLocalhost no/;' \
+    /etc/ssh/sshd_config
+
+RUN touch /root/.Xauthority
+
 # Copy again at end to make it easy to
 # change password without rebuilding.
 # Uncomment (or recomment) the next line to rebuild from this point
